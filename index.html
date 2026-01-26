@@ -264,7 +264,7 @@
     });
 </script>
 <script>
-    const sheetURL = "YOUR_SCRIPT_URL";
+    const sheetURL = "https://script.google.com/macros/s/AKfycbxcF6bafAhVx0kdrQjCHR6El9jaKe_dOqDiFOmdvrmb6uvX_nSGd1dXOA0Fi8TKNOiw/exec";
 
     function saveToGoogleSheet(data) {
         fetch(sheetURL, {
@@ -273,9 +273,13 @@
             headers: {
                 "Content-Type": "application/json"
             }
-        }).catch(error => console.error("Google Sheet Error:", error));
+        })
+        .then(response => response.text())
+        .then(result => console.log("Google Sheet:", result))
+        .catch(error => console.error("Google Sheet Error:", error));
     }
 </script>
+
 
 
 </html>
