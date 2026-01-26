@@ -240,16 +240,12 @@
     document.getElementById("contactForm").addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const name = document.getElementById("name").value;
-        const mobile = document.getElementById("mobile").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-
         const params = {
-            name: name,
-            mobile: mobile,
-            email: email,
-            message: message
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            mobile: document.getElementById("mobile").value,
+            message: document.getElementById("message").value,
+            time: new Date().toLocaleString()
         };
 
         emailjs.send(
@@ -257,15 +253,16 @@
             "template_ylw18yk",
             params
         )
-            .then(function () {
+            .then(() => {
                 alert("Message sent successfully!");
                 document.getElementById("contactForm").reset();
             })
-            .catch(function (error) {
-                alert("Failed to send message.");
+            .catch(error => {
                 console.error("EmailJS Error:", error);
+                alert("Failed to send message.");
             });
     });
 </script>
+
 
 </html>
