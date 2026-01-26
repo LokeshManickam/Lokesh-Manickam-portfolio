@@ -206,7 +206,8 @@
                     <br>
 
                     <img src="./images/mail.jpg" alt="Email" class="social-icon me-2 align-middle">
-                    <a href="mailto:lokeshmanickam2005@gmail.com?subject=Portfolio%20Contact" class="text-center mx-2 fs-5">
+                    <a href="mailto:lokeshmanickam2005@gmail.com?subject=Portfolio%20Contact"
+                        class="text-center mx-2 fs-5">
                         Email
                     </a>
 
@@ -228,5 +229,42 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("qBi8uG-bSvfnfY2rWVp2D");
+    })();
+</script>
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const mobile = document.getElementById("mobile").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        const params = {
+            name: name,
+            mobile: mobile,
+            email: email,
+            message: message
+        };
+
+        emailjs.send(
+            "service_i709cb9",
+            "template_ylw18yk",
+            params
+        )
+            .then(function () {
+                alert("Message sent successfully!");
+                document.getElementById("contactForm").reset();
+            })
+            .catch(function (error) {
+                alert("Failed to send message.");
+                console.error("EmailJS Error:", error);
+            });
+    });
+</script>
 
 </html>
