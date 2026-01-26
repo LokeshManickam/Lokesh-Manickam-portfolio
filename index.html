@@ -269,48 +269,24 @@
     function saveToGoogleSheet(data) {
         console.log("saveToGoogleSheet() called", data);
 
+        const formData = new FormData();
+        formData.append("name", data.name);
+        formData.append("email", data.email);
+        formData.append("mobile", data.mobile);
+        formData.append("message", data.message);
+        formData.append("time", data.time);
+
         fetch(sheetURL, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
+            body: formData
         })
         .then(res => res.text())
         .then(text => console.log("Sheet response:", text))
         .catch(err => console.error("Sheet error:", err));
     }
 </script>
-<script>
-    document.getElementById("contactForm").addEventListener("submit", function (e) {
-        e.preventDefault();
 
-        const params = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            mobile: document.getElementById("mobile").value,
-            message: document.getElementById("message").value,
-            time: new Date().toLocaleString()
-        };
 
-        emailjs.send(
-            "service_i709cb9",
-            "template_ylw18yk",
-            params
-        )
-        .then(() => {
-            // ✅ THIS LINE IS CRITICAL
-            saveToGoogleSheet(params);
-
-            alert("Message sent successfully!");
-            document.getElementById("contactForm").reset();
-        })
-        .catch(error => {
-            console.error("EmailJS Error:", error);
-            alert("Failed to send message.");
-        });
-    });
-</script>
 
 
 
