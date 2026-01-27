@@ -253,22 +253,23 @@
             "template_ylw18yk",
             params
         )
-            .then(() => {
-                alert("Message sent successfully!");
-                document.getElementById("contactForm").reset();
-            })
-            .catch(error => {
-                console.error("EmailJS Error:", error);
-                alert("Failed to send message.");
-            });
+        .then(() => {
+            saveToGoogleSheet(params); // 🔥 GOOGLE SHEET
+
+            alert("Message sent successfully!");
+            document.getElementById("contactForm").reset();
+        })
+        .catch(error => {
+            console.error("EmailJS Error:", error);
+            alert("Failed to send message.");
+        });
     });
 </script>
+
 <script>
-    const sheetURL = "https://script.google.com/macros/s/AKfycbxcF6bafAhVx0kdrQjCHR6El9jaKe_dOqDiFOmdvrmb6uvX_nSGd1dXOA0Fi8TKNOiw/exec";
+    const sheetURL = "https://script.google.com/macros/s/AKfycby1eKGHKMI3ouGiRoqkLm-XxXgyhCLc2tzFRvFoQqjKe4PCObtykssI9pmbfC6uhEJOfA/exec";
 
     function saveToGoogleSheet(data) {
-        console.log("saveToGoogleSheet() called", data);
-
         const formData = new FormData();
         formData.append("name", data.name);
         formData.append("email", data.email);
@@ -280,9 +281,10 @@
             method: "POST",
             body: formData
         })
-        .then(res => res.text())
-        .then(text => console.log("Sheet response:", text))
-        .catch(err => console.error("Sheet error:", err));
+            .then(response => response.text())
+            .then(result => console.log("Success saving to sheet:", result))
+            .catch(error => console.error("Error saving to sheet:", error));
     }
 </script>
+
 </html>
