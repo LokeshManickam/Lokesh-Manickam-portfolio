@@ -55,7 +55,8 @@
                             Full Stack and Data Foundations, and Embedded Systems Projects
                         </h4>
 
-                        <a href="https://wa.me/919597468580?text=Hello%20Lokesh,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect." class="btn btn-dark btn-lg" target="_blank">
+                        <a href="https://wa.me/919597468580?text=Hello%20Lokesh,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect."
+                            class="btn btn-dark btn-lg" target="_blank">
                             Contact Me
                         </a>
                     </div>
@@ -81,6 +82,11 @@
                         real-time solutions.</p>
                     <p class="pt-3">I am currently seeking internship or entry-level opportunities in software, IT, or
                         technology-driven roles where I can learn, contribute, and grow professionally.</p>
+                    <p>You can download my resume to get a detailed overview of my academic background, technical skills, certifications, and project experience.</p>
+                    <p>I am actively seeking internship and entry-level opportunities in software, IT, data, and embedded systems–related roles where I can apply my skills and continue learning.</p>
+                    <a href="./images/Resume/Lokesh_Manickam_Resume.pdf" class="btn btn-outline-dark btn-lg" download>
+                        Download Resume
+                    </a>
                 </div>
                 <div class="col-md-6 text-center">
                     <img src="./images/lokeshmanickam.jpg" alt="Lokesh Manickam" class="img-fluid w-75 ">
@@ -253,16 +259,16 @@
             "template_ylw18yk",
             params
         )
-        .then(() => {
-            saveToGoogleSheet(params); // 🔥 GOOGLE SHEET
+            .then(() => {
+                saveToGoogleSheet(params); // 🔥 GOOGLE SHEET
 
-            alert("Message sent successfully!");
-            document.getElementById("contactForm").reset();
-        })
-        .catch(error => {
-            console.error("EmailJS Error:", error);
-            alert("Failed to send message.");
-        });
+                alert("Message sent successfully!");
+                document.getElementById("contactForm").reset();
+            })
+            .catch(error => {
+                console.error("EmailJS Error:", error);
+                alert("Failed to send message.");
+            });
     });
 </script>
 
