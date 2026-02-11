@@ -1,54 +1,46 @@
-document.addEventListener("DOMContentLoaded", () => {
+const API_URL = "https://portfolio-backend-iaxw.onrender.com/api/contact";
 
-    const form = document.getElementById("contactForm");
-    const submitBtn = document.getElementById("submitBtn");
+const form = document.getElementById("contactForm");
+const btn = document.getElementById("submitBtn");
 
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault();
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-        // Collect form data
-        const data = {
-            name: document.getElementById("name").value.trim(),
-            mobile: document.getElementById("mobile").value.trim(),
-            email: document.getElementById("email").value.trim(),
-            message: document.getElementById("message").value.trim()
-        };
+  // UX improvement (interviewers notice this 👀)
+  btn.disabled = true;
+  btn.innerText = "Sending...";
 
-        // Basic validation
-        if (!data.name || !data.email || !data.mobile) {
-            alert("Please fill all required fields");
-            return;
-        }
+  const formData = {
+    name: document.getElementById("name").value,
+    mobile: document.getElementById("mobile").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  };
 
-        // 🔥 UX Improvement: Disable button & show loading
-        submitBtn.disabled = true;
-        submitBtn.innerText = "Sending...";
-
-        try {
-            const response = await fetch("https://portfolio-backend-iaxw.onrender.com/api/contact", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data)
-            });
-
-            const result = await response.json();
-
-            if (result.success) {
-                alert("Message sent successfully!");
-                form.reset();
-            } else {
-                alert("Failed to send message");
-            }
-
-        } catch (error) {
-            console.error("Error:", error);
-            alert("Server not reachable");
-        }
-
-        // 🔁 Re-enable button after response
-        submitBtn.disabled = false;
-        submitBtn.innerText = "Send Message";
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
     });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert("Message sent successfully!");
+      form.reset();
+    } else {
+      alert("Failed to send message.");
+    }
+
+  } catch (error) {
+    console.error("Frontend Error:", error);
+    alert("Server not reachable");
+  } finally {
+    // Re-enable button
+    btn.disabled = false;
+    btn.innerText = "Send Message";
+  }
 });
