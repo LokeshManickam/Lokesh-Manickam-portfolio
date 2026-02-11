@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         submitBtn.innerText = "Sending...";
 
         try {
-            const response = await fetch("https://portfolio-backend-iaxw.onrender.com/", {
+            const response = await fetch("https://portfolio-backend-iaxw.onrender.com/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
