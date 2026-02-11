@@ -6,13 +6,10 @@ require("dotenv").config();
 const app = express();
 
 // ✅ CORS FIX (VERY IMPORTANT)
-app.use(cors({
-  origin: [
-    "https://lokesh-manicam-portfolio-wjoc.vercel.app"
-  ],
-  methods: ["GET", "POST"],
-  credentials: true
-}));
+const cors = require("cors");
+
+app.use(cors()); // ✅ allow ALL origins (debug mode)
+app.use(express.json());
 
 app.use(express.json());
 
