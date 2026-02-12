@@ -1,4 +1,6 @@
 const Contact = require("../models/Contact");
+const sendMail = require("../services/mailService");
+
 
 exports.submitContactForm = async (req, res) => {
   try {
