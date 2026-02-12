@@ -6,7 +6,8 @@ form.addEventListener("submit", async (e) => {
 
   // 🔥 Change button state
   submitBtn.disabled = true;
-  submitBtn.innerText = "Sending...";
+  submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm"></span> Sending...`;
+
 
   const data = {
     name: document.getElementById("name").value,
