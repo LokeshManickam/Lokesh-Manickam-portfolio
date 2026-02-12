@@ -1,46 +1,38 @@
-const API_URL = "https://portfolio-backend-iaxw.onrender.com/api/contact";
-
 const form = document.getElementById("contactForm");
-const btn = document.getElementById("submitBtn");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  // UX improvement (interviewers notice this 👀)
-  btn.disabled = true;
-  btn.innerText = "Sending...";
-
-  const formData = {
+  const data = {
     name: document.getElementById("name").value,
-    mobile: document.getElementById("mobile").value,
     email: document.getElementById("email").value,
+    mobile: document.getElementById("mobile").value,
     message: document.getElementById("message").value
   };
 
   try {
-    const response = await fetch(API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData)
-    });
+    const res = await fetch(
+      "https://portfolio-backend-iaxw.onrender.com/api/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      }
+    );
 
-    const data = await response.json();
+    const result = await res.json();
 
-    if (data.success) {
-      alert("Message sent successfully!");
+    if (res.ok) {
+      alert("✅ Message sent successfully!");
       form.reset();
     } else {
-      alert("Failed to send message.");
+      alert("❌ Failed: " + result.message);
     }
 
-  } catch (error) {
-    console.error("Frontend Error:", error);
-    alert("Server not reachable");
-  } finally {
-    // Re-enable button
-    btn.disabled = false;
-    btn.innerText = "Send Message";
+  } catch (err) {
+    console.error("Frontend Error:", err);
+    alert("❌ Failed to send message");
   }
 });
