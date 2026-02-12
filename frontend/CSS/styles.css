@@ -1,18 +1,310 @@
-body{
-    font-family: 'poppins', sans-serif;
+/* ===============================
+   GLOBAL STYLES
+=================================*/
+
+body {
+  font-family: 'poppins', sans-serif;
+  background: #ffffff;
+  color: #0f172a;
+  transition: 0.3s;
 }
-.banner{
-    background-image: url(../images/bg1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 250px 0;
+
+.padding {
+  padding: 60px 0;
 }
-.padding{
-    padding: 60px 0;
+
+/* ===============================
+   BANNER SECTION
+=================================*/
+
+/* Light Mode */
+.banner {
+  background: linear-gradient(
+    135deg,
+    #fbfcfd,
+    #a7e0ff,
+    #5ac9fc
+  );
+  padding: 250px 0;
+  color: #0f172a;
 }
+
+/* Dark Mode */
+body.dark .banner {
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #0ea5e9
+  );
+  color: white;
+}
+
+.banner h1 {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.banner-buttons .btn {
+  padding: 12px 28px;
+  font-weight: 500;
+}
+
+/* ===============================
+   DARK MODE GLOBAL
+=================================*/
+
+body.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6 {
+  color: #ffffff;
+}
+
+body.dark p {
+  color: #e5e5e5;
+}
+
+/* ===============================
+   NAVBAR
+=================================*/
+
+.navbar {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 50px 0px;
+  transition: 0.3s;
+}
+
+body.dark .navbar {
+  background: rgba(15, 23, 42, 0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 1000;
+}
+
+.navbar .nav-link {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+body.dark .nav-link,
+body.dark .navbar-brand {
+  color: #ffffff !important;
+}
+
+/* ===============================
+   THEME TOGGLE
+=================================*/
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  transform: scale(1.15);
+}
+
+/* ===============================
+   ABOUT SECTION
+=================================*/
+
+.about-highlights div {
+  margin-bottom: 10px;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+#about .lead {
+  font-size: 1.75rem;
+}
+
+#about .least {
+  font-size: 1.25rem;
+}
+
+/* ===============================
+   CARDS
+=================================*/
+
+.card {
+  border-radius: 18px;
+  border: 1px solid transparent;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  border-color: #0ea5e9;
+}
+
+body.dark .card {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+body.dark .card:hover {
+  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+  border-color: #38bdf8;
+}
+
+/* Shine effect */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  left: 120%;
+}
+
+/* ===============================
+   SKILLS SCROLL
+=================================*/
+
+.skills-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.skills-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.skills-scroll::-webkit-scrollbar-thumb {
+  background: #0ea5e9;
+  border-radius: 10px;
+}
+
+.skill-card {
+  min-width: 280px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+body.dark .skill-card {
+  background: #1e293b;
+}
+body.dark #skills {
+  background: #111827 !important;   /* deep dark gray-blue */
+  color: #e5e7eb;
+}
+
+/* ===============================
+   SOCIAL ICONS
+=================================*/
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
 .social-icon {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    object-fit: cover;
+  font-size: 28px;
+  color: inherit;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  transform: translateY(-6px);
+  color: #0ea5e9;
+}
+
+/* ===============================
+   CONTACT DARK MODE
+=================================*/
+
+body.dark #contact {
+  background: #020617 !important;
+}
+
+/* ===============================
+   FOOTER
+=================================*/
+
+.footer {
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+body.dark .footer {
+  background: #0f172a;
+  color: #cbd5e1;
+}
+
+/* ===============================
+   WHATSAPP FLOAT
+=================================*/
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  color: white;
+  font-size: 22px;
+  padding: 14px 16px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
 }
