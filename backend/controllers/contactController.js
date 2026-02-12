@@ -1,5 +1,5 @@
 const Contact = require("../models/Contact");
-const sendMail = require("../services/mailService");
+const sendMail = require("../service/mailService");
 
 
 exports.submitContactForm = async (req, res) => {
