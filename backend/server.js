@@ -5,25 +5,26 @@ require("dotenv").config();
 
 const app = express();
 
-// 🔗 Connect to MongoDB
+// 🔗 Connect MongoDB (do not crash server if DB fails)
 connectDB();
 
-// ✅ CORRECT CORS (domain only)
-app.use(cors({
-  origin: "https://lokeshmanickam.github.io",
-  methods: ["GET", "POST"],
-  credentials: true
-}));
+// ✅ OPEN CORS FOR NOW (fixes GitHub Pages issue)
+app.use(cors());
 
-// 📦 Middleware to parse JSON
+// 📦 Middleware
 app.use(express.json());
 
 // 🛣️ Routes
 app.use("/api/contact", require("./routes/contactRoutes"));
 
-// 🏠 Root route
+// 🏠 Root route (check backend status)
 app.get("/", (req, res) => {
   res.send("🚀 Portfolio Backend API is running");
+});
+
+// ❌ Catch unknown routes
+app.use((req, res) => {
+  res.status(404).json({ error: "Route not found" });
 });
 
 // 🚀 Start server

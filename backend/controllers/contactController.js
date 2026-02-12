@@ -4,25 +4,29 @@ exports.submitContactForm = async (req, res) => {
   try {
     const { name, email, mobile, message } = req.body;
 
-    // Validate input
     if (!name || !email || !mobile || !message) {
-      return res.status(400).json({ msg: "All fields are required" });
+      return res.status(400).json({ error: "All fields are required" });
     }
 
-    // Save to MongoDB
-    const newContact = new Contact({
+    const contact = new Contact({
       name,
       email,
       mobile,
       message
     });
 
-    await newContact.save();
+    await contact.save();
 
-    res.status(200).json({ msg: "Message saved successfully" });
+    return res.status(200).json({
+      success: true,
+      message: "Message saved successfully"
+    });
 
-  } catch (error) {
-    console.error("❌ Contact form error:", error);
-    res.status(500).json({ msg: "Server error" });
+  } catch (err) {
+    console.error("CONTACT ERROR:", err);
+    return res.status(500).json({
+      success: false,
+      message: "Internal Server Error"
+    });
   }
 };
