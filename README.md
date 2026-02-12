@@ -1,54 +1,84 @@
-# Hi, I’m Lokesh Manickam 👋
+📌 Personal Portfolio Website — Full-Stack Project
 
-I am an Electrical Engineering undergraduate with a strong interest in software development, data foundations, and embedded systems. I enjoy learning new technologies and applying engineering concepts to build practical, real-world solutions.
+A fully responsive, production-ready personal portfolio website developed using a full-stack architecture. The project showcases my profile, skills, projects, and provides a functional contact system integrated with a backend API, database, and deployment.
 
-Currently, I am focusing on improving my programming skills and preparing for internship and entry-level opportunities in software, IT, and technology-driven roles.
+🌍 Live Demo
 
----
+Frontend:
+👉 https://lokeshmanickam.github.io/portfolio-frontend/
 
-## 🔧 Skills & Technologies
+Backend API:
+👉 https://portfolio-backend-iaxw.onrender.com
 
-- **Web Development:** HTML, CSS, JavaScript, Bootstrap  
-- **Programming Fundamentals:** Java (Basics), Problem Solving  
-- **Data Foundations:** Data Analysis Basics, Data Interpretation  
-- **Embedded Systems:** Arduino, ESP32, Sensors & Actuators  
-- **Tools & Platforms:** Visual Studio Code, Git (Basics), MATLAB Simulink  
+🚀 Features
 
----
+📱 Fully responsive mobile-first UI
 
-## 📂 Projects
+🎨 Modern clean design using Bootstrap
 
-### Smart Street Light Fault Detection System
-ESP32-based embedded system that detects street light faults using LDR sensors and displays status on an LCD, helping improve maintenance efficiency.
+⚙️ Backend-driven contact form
 
-### EV Charging Station Overload Prevention
-Concept-based project focused on monitoring electrical load conditions to prevent overload scenarios in EV charging stations.
+🗄️ MongoDB database integration
 
-### LPG Gas Leakage Detection System
-Safety system using an MQ-2 gas sensor to detect LPG leakage and trigger alerts using a buzzer and exhaust mechanism.
+🔐 Secure environment configuration
 
-### Personal Portfolio Website
-Responsive portfolio website built using HTML, CSS, and Bootstrap, featuring a contact form integrated with EmailJS.
+🌐 RESTful API architecture
 
----
+☁️ Production deployment (GitHub Pages + Render)
 
-## 📈 Currently Learning
+✉️ Optional email notification system
 
-- Core Java concepts  
-- Front-end best practices  
-- Data-driven problem solving  
-- Practical embedded system optimization  
+🛠️ Tech Stack
+Frontend
 
----
+HTML5
 
-## 🎯 Career Objective
+CSS3
 
-To begin my career in a software, IT, or technology-focused role where I can apply my engineering background, enhance my technical skills, and grow as a professional.
+JavaScript
 
----
+Bootstrap
 
-## 📫 Connect With Me
+Backend
 
-- 🌐 Portfolio: https://lokeshmanickam.netlify.app  
-- 💼 LinkedIn: https://www.linkedin.com/in/lokesh-manickam-s-k  
+Node.js
 
+Express.js
+
+Database
+
+MongoDB Atlas
+
+Deployment
+
+GitHub Pages (Frontend)
+
+Render (Backend)
+
+🧠 Architecture
+Frontend (GitHub Pages)
+        ↓
+REST API (Render)
+        ↓
+MongoDB Atlas (Database)
+
+📬 Contact Form Workflow
+
+User submits contact form
+
+Frontend sends POST request to backend
+
+Backend validates data
+
+Message stored in MongoDB
+
+Optional email notification sent
+
+🎯 Purpose
+
+This project demonstrates my ability to design, develop, and deploy a complete full-stack web application with real-world architecture and production deployment.
+
+👨‍💻 Author
+
+Lokesh Manickam
+Electrical Engineering Student | Aspiring Software Engineer
