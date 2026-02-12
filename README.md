@@ -1,43 +1,23 @@
-📌 Personal Portfolio Website — Full-Stack Project
+🚀 Full-Stack Portfolio Website
 
-A fully responsive, production-ready personal portfolio website developed using a full-stack architecture. The project showcases my profile, skills, projects, and provides a functional contact system integrated with a backend API, database, and deployment.
+This is a fully responsive personal portfolio website designed and developed to showcase my technical skills, engineering projects, and full-stack development capabilities.
 
-🌍 Live Demo
+The application integrates both frontend and backend technologies to provide dynamic functionality, including a working contact form connected to a live backend API and MongoDB database.
 
-Frontend:
-👉 https://lokeshmanickam.github.io/portfolio-frontend/
-
-Backend API:
-👉 https://portfolio-backend-iaxw.onrender.com
-
-🚀 Features
-
-📱 Fully responsive mobile-first UI
-
-🎨 Modern clean design using Bootstrap
-
-⚙️ Backend-driven contact form
-
-🗄️ MongoDB database integration
-
-🔐 Secure environment configuration
-
-🌐 RESTful API architecture
-
-☁️ Production deployment (GitHub Pages + Render)
-
-✉️ Optional email notification system
-
-🛠️ Tech Stack
+🛠 Tech Stack
 Frontend
 
 HTML5
 
 CSS3
 
+Bootstrap 5
+
 JavaScript
 
-Bootstrap
+Responsive Design
+
+Light & Dark Mode Toggle
 
 Backend
 
@@ -45,40 +25,66 @@ Node.js
 
 Express.js
 
-Database
+RESTful API
 
 MongoDB Atlas
 
-Deployment
+CORS Configuration
 
-GitHub Pages (Frontend)
+Environment Variable Security
 
-Render (Backend)
+🔥 Key Features
 
-🧠 Architecture
-Frontend (GitHub Pages)
-        ↓
-REST API (Render)
-        ↓
-MongoDB Atlas (Database)
+Fully responsive and mobile-friendly UI
 
-📬 Contact Form Workflow
+Glassmorphism-style navigation bar
 
-User submits contact form
+Light & Dark theme support
 
-Frontend sends POST request to backend
+Smooth scroll skill section
 
-Backend validates data
+Project showcase with structured role & tech details
 
-Message stored in MongoDB
+Contact form with backend validation
 
-Optional email notification sent
+Data stored securely in MongoDB
 
-🎯 Purpose
+API deployed on Render
 
-This project demonstrates my ability to design, develop, and deploy a complete full-stack web application with real-world architecture and production deployment.
+Frontend deployed on GitHub Pages
 
-👨‍💻 Author
+🌍 Live Demo
 
-Lokesh Manickam
-Electrical Engineering Student | Aspiring Software Engineer
+Frontend:
+👉 https://lokeshmanickam.github.io/portfolio-frontend/
+
+Backend API:
+👉 https://portfolio-backend-iaxw.onrender.com/
+
+📩 Contact Form Flow
+
+User submits form
+
+Frontend sends POST request
+
+Express backend validates request
+
+MongoDB stores contact data
+
+Response returned to frontend
+
+📌 Purpose of This Project
+
+This project demonstrates:
+
+Full-stack development capability
+
+Backend API integration
+
+Database handling
+
+Deployment experience
+
+Clean UI/UX design
+
+Production-ready project structure
