@@ -4,441 +4,418 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lokesh Manickam Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="./CSS/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
+    <title>Lokesh Manickam Portfolio</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg py-3 sticky-top">
-        <div class="container-fluid px-5">
 
-            <!-- Logo / Name -->
-            <a class="navbar-brand fw-bold" href="#">Lokesh Manickam</a>
+    <!-- NAVBAR -->
 
-            <!-- Toggle for Mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <header class="navbar">
 
-            <!-- Nav Links -->
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-3">
+        <div class="nav-container">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
+            <div class="logo">Lokesh Manickam</div>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
+            <nav>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
+            </nav>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+            <div class="nav-social">
 
-                    <!-- Resume Button -->
-                    <li class="nav-item">
-                        <a href="./Resume/Lokesh_Manickam_Resume.pdf" class="btn btn-sm btn-primary" target="_blank">
-                            Resume
-                        </a>
-                    </li>
+                <a href="https://github.com/LokeshManickam" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/lokeshmanickam" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/itz_manickam/" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-instagram"></i></a>
 
-                    <!-- Theme Toggle -->
-                    <button id="themeToggle" class="theme-btn">
-                        <i id="themeIcon" class="bi bi-moon-fill"></i>
-                    </button>
-
-
-                </ul>
             </div>
 
         </div>
-    </nav>
 
-    <section class="banner d-flex align-items-center text-center" id="home">
-        <div class="container">
+    </header>
 
-            <h1 class="display-4 fw-bold mb-3">
-                Hi, I'm Lokesh Manickam
-            </h1>
 
-            <p class="lead mb-4">
-                Electrical Engineering Student building Full-Stack,
-                IoT & Intelligent Engineering Solutions.
-            </p>
+    <!-- HERO -->
 
-            <div class="banner-buttons">
-                <a href="#projects" class="btn btn-primary btn-lg">
-                    View Projects
-                </a>
-                <a href="https://wa.me/919597468580?text=Hello%20Lokesh,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect."
-                    target="_blank" class="btn btn-success btn-lg">
-                    Contact Me
-                </a>
+    <section id="home" class="hero">
+
+        <h1 class="hero-title">Hi! I'm <span> Lokesh Manickam</span></h1>
+
+        <img src="./Images/LokeshManickam.png" alt="Lokesh" class="hero-img">
+
+        <div class="hero-buttons">
+            <a href="https://wa.me/919597468580?text=Hello%20Lokesh,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect."
+                target="_blank" rel="noopener noreferrer" class="btn">Contact</a>
+            <a href="#about" class="btn-outline">Who I Am</a>
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about">
+        <h1 class="about-title">About Me</h1>
+        <div class="section-line"></div>
+        <div class="about-content">
+            <div class="about-grid">
+
+                <div class="about-image">
+                    <a href="./Images/lokeshmanickam.jpg" target="_blank">
+                        <img src="./Images/lokeshmanickam.jpg" alt="Lokesh Manickam">
+                    </a>
+                </div>
+
+                <div class="about-text">
+                    <p>
+                        I am Lokesh Manickam, an aspiring software developer with a strong interest in technology and
+                        problem solving. I am currently pursuing my degree in Electrical and Electronics Engineering
+                        while building my skills in software development.
+
+                        My primary focus is on Java, Object-Oriented Programming, Data Structures and Algorithms, and
+                        Full Stack development. I enjoy learning new technologies and applying them to real-world
+                        projects that improve efficiency and solve practical problems.
+
+                        I am also exploring the field of data science to expand my analytical and programming abilities.
+                        My goal is to continuously grow as a developer, contribute to impactful projects, and build
+                        innovative solutions that make a difference.
+                    </p>
+                </div>
+
             </div>
-
         </div>
     </section>
 
 
-    <section id="about" class="padding">
-        <div class="container">
+    <!-- TECH STACK -->
 
-            <div class="row align-items-center">
+    <section class="tech">
 
-                <!-- LEFT SIDE CONTENT -->
-                <div class="col-lg-6">
+        <div class="tech-track">
 
-                    <h2 class="mb-4 fw-bold">About Me</h2>
+            <!-- First Set -->
+            <i class="fab fa-java" alt="Java"></i>
+            <i class="fab fa-js" alt="JavaScript"></i>
+            <i class="fab fa-html5" alt="HTML"></i>
+            <i class="fab fa-css3-alt" alt="CSS"></i>
+            <i class="fab fa-react" alt="React"></i>
+            <i class="fab fa-node-js" alt="Node.js"></i>
+            <i class="fab fa-git-alt" alt="Git"></i>
+            <i class="fab fa-github" alt="GitHub"></i>
+            <i class="fab fa-npm" alt="npm"></i>
+            <i class="fas fa-database" alt="Database"></i>
+            <i class="fas fa-server" alt="Server"></i>
+            <i class="fas fa-cloud" alt="Cloud"></i>
+            <i class="fas fa-code-branch" alt="Code Branch"></i>
 
-                    <p class="lead">
-                        Electrical Engineering student passionate about building intelligent
-                        systems that combine hardware, software, and data-driven solutions.
+            <!-- Duplicate Set -->
+            <i class="fab fa-java" alt="Java"></i>
+            <i class="fab fa-js" alt="JavaScript"></i>
+            <i class="fab fa-html5" alt="HTML"></i>
+            <i class="fab fa-css3-alt" alt="CSS"></i>
+            <i class="fab fa-react" alt="React"></i>
+            <i class="fab fa-node-js" alt="Node.js"></i>
+            <i class="fab fa-git-alt" alt="Git"></i>
+            <i class="fab fa-github" alt="GitHub"></i>
+            <i class="fab fa-npm" alt="npm"></i>
+            <i class="fas fa-database" alt="Database"></i>
+            <i class="fas fa-server" alt="Server"></i>
+            <i class="fas fa-cloud" alt="Cloud"></i>
+            <i class="fas fa-code-branch" alt="Code Branch"></i>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects" class="projects">
+
+        <h2 class="project-title">Featured Projects</h2>
+        <div class="section-line"></div>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./Images/bank-management.png" alt="Bank Management System">
+                </div>
+
+                <div class="card-content">
+                    <h2>Bank Management System</h2>
+                    <p>
+                        Developed a console-based Bank Management System using Java and OOP concepts.
+                        The system supports account creation, deposit, withdrawal, balance checking,
+                        and transaction management with structured program design.
                     </p>
 
-                    <p class="least">
-                        I have built strong foundations in full-stack development,
-                        embedded systems, and applied problem-solving through hands-on projects.
-                        My work focuses on creating practical, real-world engineering solutions.
-                    </p>
-
-                    <!-- Strength Highlights -->
-                    <div class="about-highlights mt-4">
-                        <div>⚡ Full-Stack & Backend Development</div>
-                        <div>🔌 Embedded & IoT Systems</div>
-                        <div>📊 Data & Analytical Thinking</div>
-                        <div>🧠 Problem-Solving & System Design</div>
+                    <div class="project-tech">
+                        <span class="tech-skill">Java</span>
+                        <span class="tech-skill">OOP</span>
+                        <span class="tech-skill">File Handling</span>
                     </div>
 
-                    <a href="./Resume/Lokesh_Manickam_Resume.pdf" class="btn btn-primary mt-4" target="_blank">
-                        Download Resume
-                    </a>
-
+                    <div class="card-buttons">
+                        <a href="https://github.com/lokeshmanickam/Bank-Management-System" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                        <a href="https://lokeshmanickam.github.io/Bank-Management-System/" target="_blank"
+                            rel="noopener noreferrer">Live Demo</a>
+                    </div>
                 </div>
+            </div>
 
-                <!-- RIGHT SIDE IMAGE -->
-                <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                    <img src="./images/lokeshmanickam.jpg" class="img-fluid rounded-4 shadow" alt="Lokesh Manickam">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./Images/portfolio-website.png" alt="Portfolio Website">
+                </div>
+                <div class="card-content">
+                    <h2>Portfolio Website</h2>
+                    <p>Designed and developed a responsive personal portfolio website to
+                        showcase projects, skills, and contact information with modern UI
+                        and interactive components.</p>
+                    <div class="project-tech">
+                        <span class="tech-skill">HTML</span>
+                        <span class="tech-skill">CSS</span>
+                        <span class="tech-skill">JavaScript</span>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#">GitHub</a>
+                        <a href="#">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./Images/student-management.png" alt="Student Management System">
+                </div>
+                <div class="card-content">
+                    <h2>Student Management System</h2>
+                    <p>Built a Java-based Student Management System to manage student records
+                        including adding, updating, deleting, and viewing student information
+                        using object-oriented programming principles.
+
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-skill">Java</span>
+                        <span class="tech-skill">OOP</span>
+                        <span class="tech-skill">Data Management</span>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="https://github.com/LokeshManickam/student-management-system" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                        <!-- <a href="#">Live Demo</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./Images/Expense-Tracker-Application.png" alt="Expense Tracker Application">
+                </div>
+                <div class="card-content">
+                    <h2>Expense Tracker Application</h2>
+                    <p>Created an Expense Tracker application to record and monitor daily
+                        expenses with categorized spending and summary reports for better
+                        financial management.
+
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-skill">Java</span>
+                        <span class="tech-skill">Data Structures</span>
+                        <span class="tech-skill">Logic Design</span>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="https://github.com/LokeshManickam/ExpenseTracker" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                        <!-- <a href="#">Live Demo</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./Images/to-do-list.png" alt="To-Do List Application">
+                </div>
+                <div class="card-content">
+                    <h2>To-Do List Application</h2>
+                    <p>Developed a To-Do List application to manage daily tasks with features
+                        such as adding, updating, deleting, and marking tasks as completed.
+                        Designed to improve productivity through simple task tracking.
+
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-skill">Java</span>
+                        <span class="tech-skill">OOP</span>
+                        <span class="tech-skill">Application Logic</span>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="https://github.com/LokeshManickam/ToDoList" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                        <!-- <a href="#">Live Demo</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img src="./Images/iot-ai-predictive-maintenance.jpeg"
+                        alt="IoT & AI-Based Predictive Maintenance System">
+                </div>
+                <div class="card-content">
+                    <h2>IoT & AI-Based Predictive Maintenance System (Final Year Project)</h2>
+                    <p>Designed an IoT-based predictive maintenance system for irrigation
+                        pumps using sensors to monitor operational parameters and AI-based
+                        analysis to detect early-stage faults such as dry run and overload.
+                        The system helps reduce downtime and improves operational efficiency.</p>
+
+                    <div class="project-tech">
+                        <span class="tech-skill">ESP32</span>
+                        <span class="tech-skill">IOT</span>
+                        <span class="tech-skill">Sensors</span>
+                        <span class="tech-skill">Machine Learning</span>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="https://github.com/LokeshManickam/IoT_AI_Predictive_Maintenance" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                        <!-- <a href="#">Live Demo</a> -->
+                    </div>
                 </div>
 
             </div>
 
         </div>
+
     </section>
 
-    <section id="skills" class="padding bg-light text-center">
-        <div class="container">
 
-            <!-- Title -->
-            <h2 class="text-uppercase mb-5">Skills</h2>
+    <!-- SERVICES -->
 
-            <!-- Scroll Container -->
-            <div class="skills-scroll">
+    <section id="services" class="services">
 
-                <!-- CARD 1 -->
-                <div class="skill-card">
-                    <h5>🌐 Software & Web Development</h5>
-                    <p>Build responsive websites and web apps using HTML, CSS, and JavaScript.</p>
-                </div>
+        <h2 class="services-title">Services</h2>
+        <div class="section-line"></div>
 
-                <!-- CARD 2 -->
-                <div class="skill-card">
-                    <h5>📊 Data & Analytics</h5>
-                    <p>Analyze datasets and extract insights using analytical thinking.</p>
-                </div>
+        <div class="services-grid">
 
-                <!-- CARD 3 -->
-                <div class="skill-card">
-                    <h5>🧠 Programming & Problem Solving</h5>
-                    <p>Design efficient solutions using logical and programming skills.</p>
-                </div>
-
-                <!-- CARD 4 -->
-                <div class="skill-card">
-                    <h5>🔌 Embedded Systems</h5>
-                    <p>Develop hardware projects using ESP32, Arduino, and sensors.</p>
-                </div>
-
-                <!-- CARD 5 -->
-                <div class="skill-card">
-                    <h5>⚡ Electrical Engineering</h5>
-                    <p>Foundation in circuits, power systems, and electronics.</p>
-                </div>
-
-                <!-- CARD 6 -->
-                <div class="skill-card">
-                    <h5>🛠 Tools & Platforms</h5>
-                    <p>VS Code, Git, MATLAB Simulink for development and simulation.</p>
-                </div>
-
+            <div class="service-card">
+                <i class="fas fa-code service-icon"></i>
+                <h3>Web Development</h3>
+                <p>I develop modern and responsive websites using HTML, CSS and
+                    JavaScript with clean UI and smooth user experience.</p>
             </div>
 
+            <div class="service-card">
+                <i class="fas fa-server service-icon"></i>
+                <h3>Backend Development</h3>
+                <p>I build secure backend systems using Java and APIs with
+                    database integration for scalable applications.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-microchip service-icon"></i>
+                <h3>IoT & Embedded Systems</h3>
+                <p>I create smart systems using sensors and microcontrollers
+                    for automation and real-time monitoring solutions.</p>
+            </div>
         </div>
+
     </section>
 
-    <section id="projects" class="padding text-center">
 
-        <div class="container">
+    <!-- CONTACT -->
 
-            <h2 class="text-uppercase mb-5">Projects</h2>
+    <section id="contact" class="contact">
 
-            <!-- ⭐ FEATURED PROJECT -->
-             <div class="card h-100 p-4">
+        <h1 id="contact-title" class="contact-title">Contact Me</h1>
+        <div class="section-line"></div>
 
-                <!-- Badge -->
-                <span class="badge bg-primary mb-3">⭐ Featured Project</span>
+        <div class="contact-container">
 
-                <!-- Title -->
-                <h5 class="card-title">Full-Stack Portfolio Website</h5>
+            <div class="contact-info">
 
-                <!-- Description -->
-                <p class="card-text">
-                    Designed and developed a personal portfolio website with a responsive UI and backend API for contact
-                    form processing.
-                    Integrated MongoDB database for message storage and deployed the application for live access.
-
+                <h2>Get in Touch</h2>
+                <p class="contact-info1">Feel free to reach out for collaborations, project discussions, or just a
+                    friendly chat.
                 </p>
+                <p class="contact-icon"><i class="fa-solid fa-envelope"></i> lokeshmanickam2005@gmail.com</p>
+                <p class="contact-icon"><i class="fa-solid fa-phone"></i> +91 9597468580</p>
+                <p class="contact-icon"><i class="fa-solid fa-location-dot"></i> Kurinjipadi</p>
 
-                <!-- Role -->
-                <p><strong>Role:</strong> Full-stack development including frontend design, backend API creation,
-                    database integration, and deployment.
-                </p>
+            </div>
 
-                <!-- Tech -->
-                <p><strong>Tech:</strong> HTML, CSS, JavaScript, Node.js, Express.js, MongoDB
-                </p>
+            <form class="contact-form" id="contactForm">
 
-                <!-- Links (Optional) -->
-                <div class="mt-2">
-                    <a href="https://github.com/LokeshManickam/Lokesh-Manickam-portfolio"
-                        class="btn btn-outline-primary btn-sm">GitHub</a>
-                    <a href="https://lokeshmanickam.github.io/portfolio-frontend/"
-                        class="btn btn-primary btn-sm">Demo</a>
+                <div class="input-box">
+                    <input type="text" id="name" name="name" required>
+                    <label>Name</label>
                 </div>
 
-            </div>
-            
-            <!-- 🏦 Bank Management System (Core Java) -->
-            <div class="card h-100 p-4 mt-4">
-
-                <!-- Title -->
-                <h5 class="card-title">🏦 Bank Management System (Core Java)</h5>
-
-                <!-- Description -->
-                <p class="card-text">
-                    A console-based banking application developed using Core Java to simulate real-world banking
-                    operations.
-                    The system supports account creation, deposits, withdrawals, balance checking, and transaction
-                    history
-                    management with a strong focus on Object-Oriented Programming and modular design.
-                </p>
-
-                <!-- Role -->
-                <p><strong>Role:</strong> Designed complete application architecture, implemented OOP-based classes,
-                    and developed transaction handling logic with data validation.</p>
-
-                <!-- Tech -->
-                <p><strong>Tech:</strong> Core Java, OOP Concepts, Collections Framework, File Handling</p>
-
-                <!-- Links -->
-                <div class="mt-2">
-                    <a href="https://github.com/LokeshManickam/Bank-Management-System" target="_blank"
-                        class="btn btn-outline-primary btn-sm">GitHub</a>
+                <div class="input-box">
+                    <input type="text" id="mobile" name="mobile" required>
+                    <label>Mobile Number</label>
                 </div>
 
-            </div>
-
-            <div class="card p-5 mb-5 shadow-lg border-0">
-
-                <!-- Title -->
-                <h3 class="mb-3">
-                    IoT & AI-Based Predictive Maintenance for Irrigation Pumps
-                </h3>
-
-                <!-- Description -->
-                <p class="mb-3">
-                    Developed a smart monitoring system using IoT sensors to track real-time
-                    operational parameters of irrigation pumps. Applied AI-based analysis to
-                    predict early-stage faults such as dry run and overload conditions,
-                    enabling preventive maintenance and reducing downtime.
-                </p>
-
-                <!-- Role -->
-                <p><strong>Role:</strong> System architecture design, sensor integration,
-                    and AI-based fault prediction implementation.</p>
-
-                <!-- Tech -->
-                <p><strong>Tech:</strong> ESP32, IoT Sensors, Embedded Systems,
-                    Data Analysis, AI Techniques</p>
-
-                <!-- Buttons -->
-                <div class="mt-3">
-                    <a href="https://github.com/LokeshManickam/Smart-Irrigation-Pump-Predictive-Maintenance" target="_blank"
-                        class="btn btn-outline-primary btn-sm">GitHub</a>
+                <div class="input-box">
+                    <input type="email" id="email" name="email" required>
+                    <label>Email</label>
                 </div>
 
-            </div>
+                <div class="input-box">
+                    <textarea id="message" name="message" required></textarea>
+                    <label>Message</label>
+                </div>
 
-            <div class="card h-100 p-4">
+                <button type="submit" id="submitBtn">Send Message</button>
 
-                <!-- Title -->
-                <h5 class="card-title">Smart Power Theft Detection System</h5>
+                <p id="formStatus"></p>
 
-                <!-- Description -->
-                <p class="card-text">
-                    Designed a system to detect illegal electricity tapping by monitoring voltage and current variations
-                    across the distribution line.
-                    The system generates alerts when abnormal consumption patterns are detected, improving power
-                    monitoring and loss prevention.
+            </form>
 
-                </p>
-
-                <!-- Role -->
-                <p><strong>Role:</strong> Hardware design, sensor integration, and ESP32 programming for anomaly
-                    detection and alert system.
-                </p>
-
-                <!-- Tech -->
-                <p><strong>Tech:</strong> ESP32, Voltage & Current Sensors, Embedded Systems, Power Monitoring
-                </p>
-
-                <!-- Links (Optional) 
-                <div class="mt-2">
-                    <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
-                    <a href="#" class="btn btn-primary btn-sm">Demo</a>
-                </div>-->
-
-            </div>
-            <div class="card h-100 p-4">
-
-                <!-- Title -->
-                <h5 class="card-title">Smart Street Light Fault Detection System</h5>
-
-                <!-- Description -->
-                <p class="card-text">
-                    Developed an automated system to detect faulty street lights using LDR sensors and real-time
-                    monitoring.
-                    The system identifies malfunctioning lights and displays alerts, enabling faster maintenance and
-                    improved energy efficiency.
-
-                </p>
-
-                <!-- Role -->
-                <p><strong>Role:</strong> Sensor integration, system logic development, and ESP32-based monitoring
-                    implementation.
-                </p>
-
-                <!-- Tech -->
-                <p><strong>Tech:</strong> ESP32, LDR Sensors, Embedded Systems, Automation
-                </p>
-
-                <!-- Links (Optional) -->
-                
-
-            </div>
-            
         </div>
+
     </section>
 
-    <section id="contact" class="padding bg-dark text-white">
-        <div class="container">
-            <div class="row text-center py-5">
-                <div class="col-md-12">
-                    <h4>Contact</h4>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form id="contactForm">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                        </div>
 
-                        <div class="mb-3">
-                            <label for="mobile" class="form-label">Mobile Number</label>
-                            <input type="tel" class="form-control" id="mobile" placeholder="Enter your mobile number"
-                                required>
-                        </div>
+    <!-- FOOTER -->
 
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                            <div class="form-text">Your email will not be shared.</div>
-                        </div>
+    <footer>
 
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="4"
-                                placeholder="Write your message here..."></textarea>
-                        </div>
+        <p id="footer-text">© 2026 Lokesh Manickam. All rights reserved.</p>
 
-                        <button type="submit" id="submitBtn" class="btn btn-primary">
-                            Send Message
-                        </button>
+        <div class="footer-social">
 
-                    </form>
-
-                </div>
-            </div>
-            <div class="text-center mt-4 social-links">
-
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/lokesh-manickam-s-k" target="_blank" class="social-icon">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-
-                <!-- GitHub -->
-                <a href="https://github.com/LokeshManickam" target="_blank" class="social-icon">
-                    <i class="bi bi-github"></i>
-                </a>
-
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/itz_manickam/" target="_blank" class="social-icon">
-                    <i class="bi bi-instagram"></i>
-                </a>
-
-                <!-- Email -->
-                <a href="mailto:lokeshmanickam2005@gmail.com" class="social-icon">
-                    <i class="bi bi-envelope-fill"></i>
-                </a>
-
-            </div>
+            <a href="https://github.com/lokeshmanickam" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/lokeshmanickam" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/itz_manickam/" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="mailto:lokeshmanickam2005@gmail.com" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-solid fa-envelope"></i></a>
 
         </div>
-    </section>
 
-    <footer class="footer text-center py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>&copy; 2026 Lokesh Manickam. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
     </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/contact.js"></script>
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-<script src="./js/contactform.js"></script>
-<script src="./js/ui.js"></script>
 
 </html>

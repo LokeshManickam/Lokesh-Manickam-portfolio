@@ -13,7 +13,7 @@ const sendMail = async (data) => {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-      subject: "📩 New Portfolio Contact Message",
+      subject: "New Portfolio Contact Message",
       text: `
 Name: ${data.name}
 Email: ${data.email}
@@ -23,7 +23,8 @@ Message: ${data.message}
     };
 
     await transporter.sendMail(mailOptions);
-    console.log("📧 Email sent successfully");
+    console.log("Email sent successfully");
+
   } catch (error) {
     console.error("Email error:", error);
   }

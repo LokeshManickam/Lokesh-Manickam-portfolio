@@ -14,7 +14,8 @@ const contactSchema = new mongoose.Schema({
         required: true
     },
     message: {
-        type: String
+        type: String,
+        required: true
     },
     createdAt: {
         type: Date,
@@ -22,5 +23,4 @@ const contactSchema = new mongoose.Schema({
     }
 });
 
-// ✅ THIS LINE IS CRITICAL
 module.exports = mongoose.model("Contact", contactSchema);

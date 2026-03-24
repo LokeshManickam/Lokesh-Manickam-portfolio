@@ -1,11 +1,11 @@
 const Contact = require("../models/Contact");
-const sendMail = require("../service/mailService");
+const sendMail = require("../services/mailService");
 
 exports.submitContactForm = async (req, res) => {
   try {
     const { name, email, mobile, message } = req.body;
 
-    // ✅ Validate input
+    // Validate input
     if (!name || !email || !mobile || !message) {
       return res.status(400).json({
         success: false,
@@ -13,7 +13,7 @@ exports.submitContactForm = async (req, res) => {
       });
     }
 
-    // ✅ Save to MongoDB
+    // Save to MongoDB
     const contact = new Contact({
       name,
       email,
@@ -23,7 +23,7 @@ exports.submitContactForm = async (req, res) => {
 
     await contact.save();
 
-    // ✅ Send email notification
+    // Send Email
     await sendMail({
       name,
       email,
@@ -31,7 +31,6 @@ exports.submitContactForm = async (req, res) => {
       message
     });
 
-    // ✅ Success response
     res.status(200).json({
       success: true,
       message: "Message sent successfully"
